@@ -1,4 +1,4 @@
-var friends = [ 
+var friendsArray = [ 
 
 	{
   "name":"Mr.Hankey",
@@ -21,13 +21,13 @@ var friends = [
   "name":"Eric Cartman",
   "photo":"http://s2.quickmeme.com/img/d0/d0a0848bc7b171d11eed44770e763e4e4b30684cafb171409cf3f439d13c1dd6.jpg",
   "scores":[
+      3,
+      1,
+      4,
+      1,
       5,
       1,
       4,
-      4,
-      5,
-      1,
-      2,
       5,
       4,
       1
@@ -39,11 +39,11 @@ var friends = [
   "photo":"https://www.toonpool.com/user/1172/files/heisenberg_1733925.jpg",
   "scores":[
       5,
-      1,
-      4,
-      4,
-      5,
-      1,
+      3,
+      3,
+      3,
+      2,
+      2,
       2,
       5,
       4,
@@ -55,11 +55,11 @@ var friends = [
   "name":"Homer Simpson",
   "photo":"http://i1.cdnds.net/12/07/618x651/ustv_homer_simpson_1.jpg",
   "scores":[
-      5,
+      1,
       1,
       4,
-      4,
-      5,
+      1,
+      1,
       1,
       2,
       5,
@@ -75,9 +75,9 @@ var friends = [
       5,
       1,
       4,
-      4,
       5,
-      1,
+      5,
+      5,
       2,
       5,
       4,
@@ -87,4 +87,4 @@ var friends = [
 
 
 ]
-module.exports = friends;
+module.exports = friendsArray;

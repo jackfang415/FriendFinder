@@ -1,29 +1,45 @@
-var match = require("../data/friends")
-var express = require("express");
-var app = express();
+var friends = require("../data/friends")
 
-module.exports = function(req, res) {
+console.log(friends);
 
-	app.get("/api/friends", function(req, res) {
+module.exports = function(app) {
 
-		res.json(match);
+app.get("/api/friends", function(req, res) {
 
-	});
-
-app.post("/api/friends", function(req, res) {
-
-	console.log("post")
-	console.log(req.body)
-	var userData = req.body
-	var scores = []
-	userData.added = true
-	res.json(userData)
+res.json(friends);
 
 });
 
+	app.post("/api/friends", function(req, res) {
+		
+		var userInput = req.body
+		var scoreDifference = 1000000;
+		var bestFriend = {};
+
+
+		for (var i=0; i<friends.length;i++) {
+			var difference = 0;
+
+			for (var j=0; j<friends[i].scores.length; j++) {
+				difference += Math.abs(parseInt(friends[i].scores[j] - parseInt(userInput.scores[j])));
+				if(difference<scoreDifference) {
+					scoreDifference = difference;
+					bestFriend.name = friends[i].name;
+					bestFriend.photo = friends[i].photo;
+				}
+			}
+
+		}
+
+		friends.push(userInput);
+		res.json(bestFriend);
+
+	});
+
+
 app.post("/api/clear", function(){
 
-	match = [];
+	friends = [];
 
 });
 
