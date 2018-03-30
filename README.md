@@ -14,11 +14,11 @@ Users will be taking a survey and find their closest match
 
 2. Users have to give a rating for each question between 1-5
 
-<img src = "/app/public/assets/images/survey.jpg">
+<img src = "/assets/images/survey.jpg">
 
 3. Once the survey have been finished, the page will show who is the closest match to the user.
 
-<img src = "/app/public/assets/images/picfriend.jpg">
+<img src = "/assets/images/picfriend.jpg">
 
 ## Built With
 
